@@ -1,0 +1,25 @@
+<div class="container mt-5" style="max-width: 600px;">
+    <h3 class="text-center mb-4"><b>Iniciar Sesión</b></h3>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label>Correo electrónico:</label>
+            <input type="email" formControlName="correoUsuario" class="form-control" placeholder="Introduzca su correo"
+                required>
+        </div>
+
+        <div class="mb-3">
+            <label>Contraseña:</label>
+            <input type="password" formControlName="contraseniaUsuario" class="form-control"
+                placeholder="Introduzca su contraseña" required>
+        </div>
+
+        <button type="submit" class="btn btn-dark w-100" [disabled]="loginForm.invalid">Iniciar Sesión</button>
+        <a routerLink="/registro" class="redireccion d-block mt-2">¿No tienes cuenta todavía?</a>
+        <a routerLink="/recuperar-contrasenia" class="redireccion d-block mt-1">¿No recuerdas tu contraseña? Recupérala aquí</a>
+    </form>
+
+    <div *ngIf="errorMessage" class="text-center mt-3 text-danger">
+        Se ha producido un error
+    </div>
+</div>

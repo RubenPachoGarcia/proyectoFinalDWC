@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">Muleta Y Montera</a>
+
+    <div class="d-flex">
+      <ng-container *ngIf="esAdmin; else notLoggedIn">
+        <!-- Botón de usuario con menú desplegable -->
+        <button 
+          mat-button 
+          [matMenuTriggerFor]="userMenu" 
+          #menuTrigger="matMenuTrigger"
+          (mouseenter)="abrirMenu(menuTrigger)"
+        >
+          {{ correoUsuario }}
+        </button>
+
+        <!-- Menú desplegable -->
+        <mat-menu 
+          #userMenu="matMenu"
+          (mouseenter)="cancelClose()"
+          (mouseleave)="scheduleClose(menuTrigger)"
+        >
+          <!-- Opción dinámica basada en el rol -->
+          <button *ngIf="isAdmin()" mat-menu-item routerLink="/admin">
+            Panel Administrador
+          </button>
+
+          <!-- Opción común para cerrar sesión -->
+          <button mat-menu-item (click)="logout()">Cerrar Sesión</button>
+        </mat-menu>
+      </ng-container>
+
+      <!-- Si el usuario no está autenticado -->
+      <ng-template #notLoggedIn>
+        <a routerLink="/registro" class="btn registrate">Registrate</a>
+        <a routerLink="/login" class="btn login-btn">Login</a>
+      </ng-template>
+    </div>
+  </div>
+</nav>

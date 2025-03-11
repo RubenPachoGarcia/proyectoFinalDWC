@@ -1,0 +1,33 @@
+<div class="container Formulario" style="max-width: 800px;">
+  <h3 class="text-center mb-4"><b>Alta nueva cuenta</b></h3>
+
+  <form [formGroup]="registroForm" (ngSubmit)="validarYEnviar()">
+    <div>
+      <label>Nombre Completo:</label>
+      <input type="text" formControlName="nombreCompletoUsuario" placeholder="Introduzca su nombre completo" required>
+    </div>
+    <div>
+      <label>Correo electrónico:</label>
+      <input type="email" formControlName="correoUsuario" placeholder="Introduzca su correo electrónico" required>
+    </div>
+    <div>
+      <label>Teléfono:</label>
+      <input type="text" formControlName="telefonoUsuario" placeholder="Introduzca su teléfono" required>
+    </div>
+    <div>
+      <label>Foto:</label>
+      <input type="file" (change)="onFileSelected($event)" required>
+    </div>
+    <div>
+      <label>Contraseña:</label>
+      <input type="password" formControlName="contraseniaUsuario" placeholder="Introduzca su contraseña" required>
+    </div>
+    <div>
+      <label>Confirmar Contraseña:</label>
+      <input type="password" formControlName="confirmarContraseniaUsuario" placeholder="Vuelva a introducir su contraseña" required>
+    </div>
+
+    <button type="submit">Registrarse</button>
+    <div *ngIf="mensajeError" class="text-danger">{{ mensajeError }}</div>
+  </form>
+</div>

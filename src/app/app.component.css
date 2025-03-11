@@ -1,0 +1,4 @@
+router-outlet {
+    display: block;
+    margin: 50px 0; /* Aplica 50px arriba y abajo, 0 en los lados */
+}

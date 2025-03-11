@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Cambiar Contraseña</h2>
+  <form [formGroup]="cambiarForm" (ngSubmit)="cambiarContrasenia()">
+    
+    <div class="form-group">
+      <label>Nueva Contraseña</label>
+      <input type="password" formControlName="contrasenia" class="form-control">
+      <small *ngIf="cambiarForm.get('contrasenia')?.invalid && cambiarForm.get('contrasenia')?.touched" class="text-danger">
+        La contraseña elegida no esta disponible.
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Confirmar Contraseña</label>  
+      <input type="password" formControlName="confirmarContrasenia" class="form-control">
+    </div>
+
+    <small *ngIf="cambiarForm.get('confirmarContrasenia')?.hasError('notMatching') && cambiarForm.get('confirmarContrasenia')?.touched" class="text-danger">
+      Las contraseñas no coinciden.
+    </small>
+
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="cambiarForm.invalid || cambiarForm.get('confirmarContrasenia')?.hasError('notMatching')">
+      Cambiar Contraseña
+    </button>
+  </form>
+</div>

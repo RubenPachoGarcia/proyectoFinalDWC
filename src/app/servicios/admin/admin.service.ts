@@ -13,12 +13,12 @@ export interface Usuario {
   providedIn: 'root'
 })
 export class AdminService {
-  private apiUrl = 'http://localhost:8080/api/usuarios';
+  private apiUrl = 'http://localhost:8099/api/admin';
 
   constructor(private http: HttpClient) {}
 
   obtenerUsuarios(): Observable<Usuario[]> {
-    return this.http.get<Usuario[]>(`${this.apiUrl}/lista`);
+    return this.http.get<Usuario[]>(`${this.apiUrl}/usuarios`);
   }
 
   eliminarUsuario(idUsuario: number): Observable<{ message: string }> {

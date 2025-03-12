@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RegistroService {
-  private apiUrl = 'http://localhost:8080/api/registro/usuario';  // Endpoint correcto
+  private apiUrl = 'http://localhost:8099/api/registro/usuario';  // Endpoint correcto
 
   constructor(private http: HttpClient) {}
 

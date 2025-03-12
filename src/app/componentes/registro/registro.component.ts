@@ -53,9 +53,8 @@ export class RegistroComponent {
     formData.append('nombreCompletoUsuario', this.registroForm.get('nombreCompletoUsuario')?.value);
     formData.append('correoUsuario', this.registroForm.get('correoUsuario')?.value);
     formData.append('telefonoUsuario', this.registroForm.get('telefonoUsuario')?.value);
-    formData.append('contraseniaUsuario', this.registroForm.get('contraseniaUsuario')?.value);
+    formData.append('contraseniaUsuario', contraseniaUsuario);
     formData.append('esAdmin', 'false');
-    formData.append('confirmado', 'false');
 
     if (this.fotoSeleccionada) {
       formData.append('fotoUsuario', this.fotoSeleccionada);
@@ -72,4 +71,5 @@ export class RegistroComponent {
       }
     });
   }
+
 }

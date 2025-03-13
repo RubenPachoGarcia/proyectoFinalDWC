@@ -1,10 +1,10 @@
 <div class="container Formulario" style="max-width: 800px;">
-  <h3 class="text-center mb-4"><b>Alta nueva cuenta</b></h3>
+  <h3 class="text-center mb-4" class="tituloRegistro"><b>Alta nueva cuenta</b></h3>
 
   <form [formGroup]="registroForm" (ngSubmit)="validarYEnviar()">
     <div>
       <label>Nombre Completo:</label>
-      <input type="text" formControlName="nombreCompletoUsuario" placeholder="Introduzca su nombre completo" required>
+      <input class="input" type="text" formControlName="nombreCompletoUsuario" placeholder="Introduzca su nombre completo" required>
     </div>
     <div>
       <label>Correo electrónico:</label>
@@ -27,7 +27,11 @@
       <input type="password" formControlName="confirmarContraseniaUsuario" placeholder="Vuelva a introducir su contraseña" required>
     </div>
 
-    <button type="submit">Registrarse</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="submit" class="botonRegistro">Registrarse</button>
     <div *ngIf="mensajeError" class="text-danger">{{ mensajeError }}</div>
   </form>
 </div>

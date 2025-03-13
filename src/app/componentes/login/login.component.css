@@ -1,0 +1,19 @@
+.container{
+    font-family: 'Open Sans';
+}
+
+.tituloLogin{
+    font-family: 'Open Sans';
+}
+
+.botonLogin{
+    background-color: #FFA500;
+	color: white;
+	border-color: #FFA500;
+	padding: 5px 10px;
+	margin-left: -70px;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'Open Sans';
+}

@@ -3,6 +3,7 @@
     <form [formGroup]="recuperarForm" (ngSubmit)="enviarCorreoUsuario()">
       <label for="correoUsuario">Correo Electrónico:</label>
       <input id="correoUsuario" formControlName="correoUsuario" type="email" required />
+      <br>
       <button type="submit" [disabled]="recuperarForm.invalid">Enviar</button>
     </form>
     <p *ngIf="mensaje">{{ mensaje }}</p>

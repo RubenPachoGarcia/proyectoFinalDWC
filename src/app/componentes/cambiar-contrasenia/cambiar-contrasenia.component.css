@@ -7,24 +7,25 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     padding-top: 20px;
+    font-family: 'Open Sans';
 }
 
 .container {
-    background-color: #003366;
-    color: white;
+    background-color: gainsboro;
+    color: black;
     padding: 20px;
     border-radius: 10px;
-    border: 4px solid black;
     width: 90%;
     max-width: 800px;
     margin: auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     text-align: center;
+    font-family: 'Open Sans';
 }
 
 h2 {
     text-align: center;
-    color: white;
+    color: black;
+    font-family: 'Open Sans';
 }
 
 .form-group {
@@ -51,16 +52,15 @@ input[type="password"] {
 }
 
 button {
-    width: calc(100% - 20px);
-    padding: 10px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 10px auto;
-    display: block;
+    background-color: #FFA500;
+	color: white;
+	border-color: #FFA500;
+	padding: 5px 10px;
+	margin-left: 10px;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 15px;
+	font-family: 'Open Sans';
 }
 
 button:hover {
